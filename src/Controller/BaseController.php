@@ -10,6 +10,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\GameTwentyOne;
 use App\DiceHand;
+use App\Entity\Books;
+use Doctrine\ORM\EntityManagerInterface;
 
 
 
@@ -19,12 +21,33 @@ class BaseController extends AbstractController
   /**
    * @Route("/")
   */
-  public function index(): Response
-  {
-    return $this->render('dice.html.twig', [
-        'message' => "Hello World in view",
-    ]);
-  }
+    public function index(): Response
+    {
+
+
+      return $this->render('dice.html.twig', [
+          'message' => "Hello World in view",
+      ]);
+    }
+
+    public function books(): Response
+    {
+      $books1 = $this->getDoctrine()
+          ->getRepository(Books::class)
+          ->findById(1);
+      $books2 = $this->getDoctrine()
+          ->getRepository(Books::class)
+          ->findById(2);
+      $books3 = $this->getDoctrine()
+          ->getRepository(Books::class)
+          ->findById(3);
+      
+      return $this->render('books.html.twig', [
+          'book1' => $books1,
+          'book2' => $books2,
+          'book3' => $books3,
+      ]);
+    }
 
     public function DiceGames(): Response
     {

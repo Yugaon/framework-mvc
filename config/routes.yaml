@@ -14,6 +14,10 @@ dice-try:
     path: /dice-try
     controller: App\Controller\BaseController::DiceTry
 
+books-index:
+    path: /books-index
+    controller: App\Controller\BaseController::Books
+
 21_1:
     path: /21_1
     controller: App\Controller\BaseController::DiceOneGame
