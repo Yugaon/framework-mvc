@@ -11,19 +11,12 @@ use App\Entity\ScoreList;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-
-
 class GameTwentyOne
 {
-    private $save;
     public $lastroll;
     public $lastrollcomputer;
     private $sides;
-    private $total;
     private $message;
-    private $historik;
-    private $total1;
-
 
     public function __construct(int $sides)
     {
@@ -51,8 +44,7 @@ class GameTwentyOne
             $session->set('historik', $innanhistorik);
 
             $this->reset($request);
-          }
-        elseif ($session->get('total') > 21) {
+        } elseif ($session->get('total') > 21) {
             $this->message = 'You lost play again!';
             $historia = "Computer";
             $nyrunda = $session->get('runda');
@@ -65,64 +57,51 @@ class GameTwentyOne
             $innanhistorik = $session->get('historik');
             $innanhistorik[$runda] = $historik;
             $session->set('historik', $innanhistorik);
-
             $this->reset($request);
-
-          }
+        }
         return $this->lastroll;
     }
+
     public function getLastRoll()
     {
         return $this->lastroll;
     }
+
     public function getTotal($request)
     {
         $session = $request->getSession();
         return $session->get('total');
     }
-    public function Reset(Request $request)
+
+    public function reset(Request $request)
     {
         $session = $request->getSession();
         $session->set('total', 0);
     }
-    public function ResetScore($request)
+
+    public function resetScore($request)
     {
-      $count = 0;
-      $session = $request->getSession();
-      $session->set('historik', []);
-      $session->set('runda', 0);
+        $session = $request->getSession();
+        $session->set('historik', []);
+        $session->set('runda', 0);
     }
-    public function Message()
+
+    public function message()
     {
         return $this->message;
     }
 
-    public function Computer($request)
+    public function computer($request)
     {
-      $session = $request->getSession();
-      $computer_value = 0;
-      while ($computer_value < 21 or $computer_value == $session->get('total')) {
-          $this->lastrollcomputer = random_int(1, $this->sides);
-          $computer_value = $computer_value + $this->lastrollcomputer;
-          if ($computer_value == 21 or $computer_value == $session->get('total')) {
-              $session->set('total', 0);
-              $this->message = 'You lost play again!';
-              $historia = "Computer";
-              $nyrunda = $session->get('runda');
-              $session->set('runda', $nyrunda + 1);
-              $runda = $session->get('runda');
-              $historik = array(
-                'vinnare' => $historia,
-                'runda' => $runda
-              );
-              $innanhistorik = $session->get('historik');
-              $innanhistorik[$runda] = $historik;
-              $session->set('historik', $innanhistorik);
-              break;
-          } else if ($computer_value > 22 and $computer_value != 21) {
+        $session = $request->getSession();
+        $computerValue = 0;
+        while ($computerValue < 21 or $computerValue == $session->get('total')) {
+            $this->lastrollcomputer = random_int(1, $this->sides);
+            $computerValue = $computerValue + $this->lastrollcomputer;
+            if ($computerValue == 21 or $computerValue == $session->get('total')) {
                 $session->set('total', 0);
-                $this->message = 'Congratulations you won!';
-                $historia = "Du";
+                $this->message = 'You lost play again!';
+                $historia = "Computer";
                 $nyrunda = $session->get('runda');
                 $session->set('runda', $nyrunda + 1);
                 $runda = $session->get('runda');
@@ -134,13 +113,28 @@ class GameTwentyOne
                 $innanhistorik[$runda] = $historik;
                 $session->set('historik', $innanhistorik);
                 break;
-          }
-      }
-    }
-    function getHistorik($request)
-    {
-      $session = $request->getSession();
-      return $session->get('historik');
+            } else if ($computerValue > 22 and $computerValue != 21) {
+                  $session->set('total', 0);
+                  $this->message = 'Congratulations you won!';
+                  $historia = "Du";
+                  $nyrunda = $session->get('runda');
+                  $session->set('runda', $nyrunda + 1);
+                  $runda = $session->get('runda');
+                  $historik = array(
+                    'vinnare' => $historia,
+                    'runda' => $runda
+                  );
+                  $innanhistorik = $session->get('historik');
+                  $innanhistorik[$runda] = $historik;
+                  $session->set('historik', $innanhistorik);
+                  break;
+            }
+        }
     }
 
+    public function getHistorik($request)
+    {
+        $session = $request->getSession();
+        return $session->get('historik');
+    }
 }

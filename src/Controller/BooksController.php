@@ -33,7 +33,7 @@ class BooksController extends AbstractController
 
         $product = new Books();
         $product->setTitel("Alice in wonderland");
-        $product->setCode(0-4189-3721-4);
+        $product->setCode(0 - 4189 - 3721 - 4);
         $product->setAuthor("Lewis Carroll");
         $product->setLinkPciture("alice_wonderland.jpg");
 
@@ -43,14 +43,14 @@ class BooksController extends AbstractController
         // actually executes the queries (i.e. the INSERT query)
         $entityManager->flush();
 
-        return new Response('Saved new product with id '.$product->getId());
+        return new Response('Saved new product with id ' . $product->getId());
     }
 
         /**
      * @Route("/books/all", name="find_all_books")
      */
     public function findAllProduct(
-            EntityManagerInterface $entityManager
+        EntityManagerInterface $entityManager
     ): Response {
         $products = $entityManager
             ->getRepository(Books::class)

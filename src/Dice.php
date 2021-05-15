@@ -6,7 +6,6 @@ namespace App;
 
 class Dice
 {
-    private $save;
     public $lastroll;
     private $sides;
 
@@ -19,9 +18,9 @@ class Dice
     public function roll()
     {
         $this->lastroll = random_int(1, $this->sides);
-
         return $this->lastroll;
     }
+
     public function getLastRoll()
     {
         return $this->lastroll;
