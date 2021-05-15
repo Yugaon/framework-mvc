@@ -7,6 +7,10 @@ namespace App;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Request;
+use App\Entity\ScoreList;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 
 
 class GameTwentyOne
@@ -83,6 +87,7 @@ class GameTwentyOne
     }
     public function ResetScore($request)
     {
+      $count = 0;
       $session = $request->getSession();
       $session->set('historik', []);
       $session->set('runda', 0);
@@ -131,10 +136,6 @@ class GameTwentyOne
                 break;
           }
       }
-    }
-    function stop($request)
-    {
-        return $this->computer($request);
     }
     function getHistorik($request)
     {

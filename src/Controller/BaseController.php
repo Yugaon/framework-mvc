@@ -11,7 +11,9 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\GameTwentyOne;
 use App\DiceHand;
 use App\Entity\Books;
+use App\Entity\ScoreList;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\DBAL\Connection;
 
 
 
@@ -23,10 +25,21 @@ class BaseController extends AbstractController
   */
     public function index(): Response
     {
-
-
       return $this->render('dice.html.twig', [
           'message' => "Hello World in view",
+      ]);
+    }
+
+    public function highscore(): Response
+    {
+      $repository = $this->getDoctrine()->getRepository(ScoreList::class);
+      $products = $repository->findBy(
+          [],
+          ['procent' => 'DESC'],
+          10
+      );
+      return $this->render('highscore.html.twig', [
+          'scorelist' => $products,
       ]);
     }
 
@@ -41,7 +54,7 @@ class BaseController extends AbstractController
       $books3 = $this->getDoctrine()
           ->getRepository(Books::class)
           ->findById(3);
-      
+
       return $this->render('books.html.twig', [
           'book1' => $books1,
           'book2' => $books2,
@@ -83,6 +96,7 @@ class BaseController extends AbstractController
     public function RollDice(Request $request): Response
     {
         $session = $request->getSession();
+        $session->set('idScore', 0);
         $object = new GameTwentyOne(6);
         return $this->render('21_1.html.twig', [
         'message' => $object->roll($request),
@@ -116,13 +130,37 @@ class BaseController extends AbstractController
     }
     public function ResetScore(Request $request): Response
     {
+      $messages = "";
+      $count = 0;
       $session = $request->getSession();
+      $array = $session->get('historik');
+      for ($i = 1; $i < sizeof($session->get('historik')) + 1; $i++) {
+          if ($array[$i]['vinnare'] == "Du") {
+              $count++;
+          }
+      }
+      if ($session->get('runda') >= 5) {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $product = new ScoreList();
+
+        $product->setRundor($session->get('runda'));
+        $product->setVunnit($count);
+        $rakna = $session->get('runda');
+        $product->setProcent(($count/$rakna) * 100);
+        $session->set('idScore', $product->getId());
+        $repository = $this->getDoctrine()->getRepository(ScoreList::class);
+        $entityManager->persist($product);
+        $entityManager->flush();
+      }
       $object = new GameTwentyOne(6);
       $object->ResetScore($request);
+
+
       return $this->render('21_1.html.twig', [
         'message' => null,
         'totale' => $object->getTotal($request) ?? $object->roll(),
-        'realmessage' => $object->Message(),
+        'realmessage' => null,
         'historik' => $object->getHistorik($request),
       ]);
     }

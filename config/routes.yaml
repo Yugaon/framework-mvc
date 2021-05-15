@@ -18,6 +18,10 @@ books-index:
     path: /books-index
     controller: App\Controller\BaseController::Books
 
+highscore:
+    path: /highscore
+    controller: App\Controller\BaseController::highscore
+
 21_1:
     path: /21_1
     controller: App\Controller\BaseController::DiceOneGame

@@ -1,10 +1,22 @@
 {% include 'header.html.twig' %}
-        <?php $_SESSION['value'] = 0;?>
-        <h3>Let's play 21</h3>
-          <form action="21_1" method="POST">
-            <input class="button" type="submit" value="One die">
-          </form>
-          <form action="21_2" method="POST">
-            <input class="button" type="submit" value="Two dice">
-          </form>
+<h3>Highscore</h3>
+<table>
+<tr>
+<th>Plats</th>
+<th>Id</th>
+<th>Rundor</th>
+<th>Vunnit</th>
+<th>Procent</th>
+</tr>
+<tr>
+{% for key,variables in scorelist %}
+<th>{{key + 1}}</th>
+<th>{{ variables.id }}</th>
+<th>{{ variables.rundor }}</th>
+<th>{{ variables.vunnit }}</th>
+<th>{{ variables.procent }}</th>
+</tr>
+{% endfor %}
+
+</table>
 {% include 'footer.html.twig' %}
