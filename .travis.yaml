@@ -2,7 +2,7 @@
 language: php
 
 php:
-    - "7.2.5"
+    - "7.4.9"
     #- "8.0"
 
 before_script:
