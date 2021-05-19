@@ -8,6 +8,11 @@ use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 use App\DiceHand;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage;
+use Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage;
 
 /**
 * Test cases for class Guess.
@@ -32,10 +37,22 @@ class FunctionsAndClass extends TestCase
 
     public function testForDiceHand()
     {
+
         $dice = new DiceHand(6);
         $this->assertInstanceOf("\App\DiceHand", $dice);
 
         $res = $dice->values();
         $this->assertEquals($res, $res);
+
+        $dice->Message();
+    }
+
+    public function testForGameTwentyOne()
+    {
+
+        $dice = new GameTwentyOne(6);
+        $this->assertInstanceOf("\App\GameTwentyOne", $dice);
+
+        $dice->Message();
     }
 }
