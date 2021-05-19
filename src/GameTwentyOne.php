@@ -25,10 +25,43 @@ class GameTwentyOne
 
     public function roll(Request $request)
     {
-        $session = $request->getSession();
+      $session = $request->getSession();
+
+        if ($session->get('total') == 21) {
+            $this->message = 'Congratulations you won!';
+            $historia = "Du";
+            $nyrunda = $session->get('runda');
+            $session->set('runda', $nyrunda + 1);
+            $runda = $session->get('runda');
+            $historik = array(
+              'vinnare' => $historia,
+              'runda' => $runda
+            );
+            $innanhistorik = $session->get('historik');
+            $innanhistorik[$runda] = $historik;
+            $session->set('historik', $innanhistorik);
+
+            $this->reset($request);
+        } elseif ($session->get('total') > 21) {
+            $this->message = 'You lost play again!';
+            $historia = "Computer";
+            $nyrunda = $session->get('runda');
+            $session->set('runda', $nyrunda + 1);
+            $runda = $session->get('runda');
+            $historik = array(
+              'vinnare' => $historia,
+              'runda' => $runda
+            );
+            $innanhistorik = $session->get('historik');
+            $innanhistorik[$runda] = $historik;
+            $session->set('historik', $innanhistorik);
+            $this->reset($request);
+        }
+
         $this->lastroll = random_int(1, $this->sides);
         $total = $session->get('total');
         $session->set('total', $total + $this->lastroll);
+
         if ($session->get('total') == 21) {
             $this->message = 'Congratulations you won!';
             $historia = "Du";
@@ -136,5 +169,10 @@ class GameTwentyOne
     {
         $session = $request->getSession();
         return $session->get('historik');
+    }
+
+    public function stop($request)
+    {
+        return $this->computer($request);
     }
 }
