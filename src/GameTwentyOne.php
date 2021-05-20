@@ -25,7 +25,7 @@ class GameTwentyOne
 
     public function roll(Request $request)
     {
-      $session = $request->getSession();
+        $session = $request->getSession();
 
         if ($session->get('total') == 21) {
             $this->message = 'Congratulations you won!';
