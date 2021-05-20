@@ -66,7 +66,6 @@ class FunctionsAndClass extends TestCase
         $this->assertEmpty($dice->resetScore($request));
         $dice->computer($request);
         $this->assertEquals($dice->computer($request), $dice->stop($request));
-
     }
 
     public function testForDiceHandSecond()
@@ -84,6 +83,5 @@ class FunctionsAndClass extends TestCase
         $this->assertEquals($session->get('historik'), $dice->getHistorik($request));
         $dice->computer($request);
         $this->assertEquals($dice->computer($request), $dice->stop($request));
-
     }
 }

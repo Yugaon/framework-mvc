@@ -97,8 +97,8 @@ class BaseController extends AbstractController
         $object = new GameTwentyOne(6);
         return $this->render('21_1.html.twig', [
         'message' => $object->roll($request),
-        'totale' => $object->getTotal($request) ?? $object->roll(),
-        'realmessage' => $object->Message($request),
+        'totale' => $object->getTotal($request),
+        'realmessage' => $object->Message(),
         'historik' => $object->getHistorik($request),
         ]);
     }
@@ -159,7 +159,7 @@ class BaseController extends AbstractController
 
         return $this->render('21_1.html.twig', [
           'message' => null,
-          'totale' => $object->getTotal($request) ?? $object->roll(),
+          'totale' => $object->getTotal($request),
           'realmessage' => null,
           'historik' => $object->getHistorik($request),
         ]);

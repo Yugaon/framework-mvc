@@ -18,9 +18,9 @@ use Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage;
 /**
 * Test cases for class Guess.
 */
-class Entitytest extends TestCase {
-
-public function testForBooks()
+class Entitytest extends TestCase
+{
+    public function testForBooks()
     {
 
         $dice = new Books();
@@ -39,32 +39,32 @@ public function testForBooks()
     }
 
     public function testForProducts()
-        {
+    {
 
-            $dice = new Product();
-            $this->assertInstanceOf("\App\Entity\Product", $dice);
+        $dice = new Product();
+        $this->assertInstanceOf("\App\Entity\Product", $dice);
 
 
-            $this->assertEmpty($dice->getId());
-            $this->assertEmpty($dice->getName());
-            $this->assertEquals($dice->setName("hey"), $dice);
-            $this->assertEmpty($dice->getValue());
-            $this->assertEquals($dice->setValue(1), $dice);
-        }
+        $this->assertEmpty($dice->getId());
+        $this->assertEmpty($dice->getName());
+        $this->assertEquals($dice->setName("hey"), $dice);
+        $this->assertEmpty($dice->getValue());
+        $this->assertEquals($dice->setValue(1), $dice);
+    }
 
     public function testForScoreList()
-        {
+    {
 
-            $dice = new ScoreList();
-            $this->assertInstanceOf("\App\Entity\ScoreList", $dice);
+        $dice = new ScoreList();
+        $this->assertInstanceOf("\App\Entity\ScoreList", $dice);
 
 
-            $this->assertEmpty($dice->getId());
-            $this->assertEmpty($dice->getVunnit());
-            $this->assertEquals($dice->setVunnit(1), $dice);
-            $this->assertEmpty($dice->getRundor());
-            $this->assertEquals($dice->setRundor(1), $dice);
-            $this->assertEmpty($dice->getProcent());
-            $this->assertEquals($dice->setProcent(1), $dice);
-        }
+        $this->assertEmpty($dice->getId());
+        $this->assertEmpty($dice->getVunnit());
+        $this->assertEquals($dice->setVunnit(1), $dice);
+        $this->assertEmpty($dice->getRundor());
+        $this->assertEquals($dice->setRundor(1), $dice);
+        $this->assertEmpty($dice->getProcent());
+        $this->assertEquals($dice->setProcent(1), $dice);
+    }
 }

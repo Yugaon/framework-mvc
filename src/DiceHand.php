@@ -14,6 +14,7 @@ class DiceHand
     private $values;
     private $sides = 6;
     private $message;
+    public $lastrollcomputer;
 
 
     public function __construct(int $dices)
