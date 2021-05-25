@@ -40,3 +40,7 @@ b7f045,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/app/public/roll,162139190
 fa7ad3,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/app/public/roll,1621391903,,200
 ffefaa,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/app/public/roll,1621391904,,200
 126436,::1,GET,http://localhost:8080/dbwebb/mvc/me/ci/app/public/,1621480465,,200
+782706,::1,GET,http://localhost:8080/dbwebb/mvc/me/ci/public/,1621963500,,200
+1e525a,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/public/21_1,1621963506,,200
+8dfb15,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/public/roll,1621963508,,200
+e6f05c,::1,GET,http://localhost:8080/dbwebb/mvc/me/ci/public/highscore,1621963510,,200
