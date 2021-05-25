@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1621963287">
-  <project timestamp="1621963287">
+<coverage generated="1621964006">
+  <project timestamp="1621964006">
     <file name="C:\Users\Martin\dbwebb-kurser\mvc\me\ci\src\Controller\BaseController.php">
       <class name="App\Controller\BaseController" namespace="global">
         <metrics complexity="18" methods="15" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="115" coveredstatements="0" elements="130" coveredelements="0"/>
@@ -202,7 +202,7 @@
     </file>
     <file name="C:\Users\Martin\dbwebb-kurser\mvc\me\ci\src\DiceHand.php">
       <class name="App\DiceHand" namespace="global">
-        <metrics complexity="20" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="72" elements="93" coveredelements="81"/>
+        <metrics complexity="20" methods="10" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="60" elements="93" coveredelements="68"/>
       </class>
       <line num="20" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="2"/>
       <line num="22" type="stmt" count="2"/>
@@ -264,25 +264,25 @@
       <line num="110" type="method" name="getHistorik" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="112" type="stmt" count="1"/>
       <line num="113" type="stmt" count="1"/>
-      <line num="116" type="method" name="computer" visibility="public" complexity="7" crap="7" count="1"/>
+      <line num="116" type="method" name="computer" visibility="public" complexity="7" crap="9.58" count="1"/>
       <line num="118" type="stmt" count="1"/>
       <line num="119" type="stmt" count="1"/>
       <line num="120" type="stmt" count="1"/>
       <line num="121" type="stmt" count="1"/>
       <line num="122" type="stmt" count="1"/>
       <line num="123" type="stmt" count="1"/>
-      <line num="124" type="stmt" count="1"/>
-      <line num="125" type="stmt" count="1"/>
-      <line num="126" type="stmt" count="1"/>
-      <line num="127" type="stmt" count="1"/>
-      <line num="128" type="stmt" count="1"/>
-      <line num="129" type="stmt" count="1"/>
-      <line num="131" type="stmt" count="1"/>
-      <line num="132" type="stmt" count="1"/>
-      <line num="134" type="stmt" count="1"/>
-      <line num="135" type="stmt" count="1"/>
-      <line num="136" type="stmt" count="1"/>
-      <line num="137" type="stmt" count="1"/>
+      <line num="124" type="stmt" count="0"/>
+      <line num="125" type="stmt" count="0"/>
+      <line num="126" type="stmt" count="0"/>
+      <line num="127" type="stmt" count="0"/>
+      <line num="128" type="stmt" count="0"/>
+      <line num="129" type="stmt" count="0"/>
+      <line num="131" type="stmt" count="0"/>
+      <line num="132" type="stmt" count="0"/>
+      <line num="134" type="stmt" count="0"/>
+      <line num="135" type="stmt" count="0"/>
+      <line num="136" type="stmt" count="0"/>
+      <line num="137" type="stmt" count="0"/>
       <line num="138" type="stmt" count="1"/>
       <line num="139" type="stmt" count="1"/>
       <line num="140" type="stmt" count="1"/>
@@ -297,7 +297,7 @@
       <line num="151" type="stmt" count="1"/>
       <line num="152" type="stmt" count="1"/>
       <line num="155" type="stmt" count="1"/>
-      <metrics loc="156" ncloc="156" classes="1" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="72" elements="93" coveredelements="81"/>
+      <metrics loc="156" ncloc="156" classes="1" methods="10" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="60" elements="93" coveredelements="68"/>
     </file>
     <file name="C:\Users\Martin\dbwebb-kurser\mvc\me\ci\src\Entity\Books.php">
       <class name="App\Entity\Books" namespace="global">
@@ -370,7 +370,7 @@
     </file>
     <file name="C:\Users\Martin\dbwebb-kurser\mvc\me\ci\src\GameTwentyOne.php">
       <class name="App\GameTwentyOne" namespace="global">
-        <metrics complexity="20" methods="10" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="101" coveredstatements="67" elements="111" coveredelements="75"/>
+        <metrics complexity="20" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="101" coveredstatements="79" elements="111" coveredelements="88"/>
       </class>
       <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="23" type="stmt" count="1"/>
@@ -445,25 +445,25 @@
       <line num="120" type="stmt" count="1"/>
       <line num="122" type="method" name="message" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="124" type="stmt" count="1"/>
-      <line num="127" type="method" name="computer" visibility="public" complexity="7" crap="9.58" count="1"/>
+      <line num="127" type="method" name="computer" visibility="public" complexity="7" crap="7" count="1"/>
       <line num="129" type="stmt" count="1"/>
       <line num="130" type="stmt" count="1"/>
       <line num="131" type="stmt" count="1"/>
       <line num="132" type="stmt" count="1"/>
       <line num="133" type="stmt" count="1"/>
       <line num="134" type="stmt" count="1"/>
-      <line num="135" type="stmt" count="0"/>
-      <line num="136" type="stmt" count="0"/>
-      <line num="137" type="stmt" count="0"/>
-      <line num="138" type="stmt" count="0"/>
-      <line num="139" type="stmt" count="0"/>
-      <line num="140" type="stmt" count="0"/>
-      <line num="142" type="stmt" count="0"/>
-      <line num="143" type="stmt" count="0"/>
-      <line num="145" type="stmt" count="0"/>
-      <line num="146" type="stmt" count="0"/>
-      <line num="147" type="stmt" count="0"/>
-      <line num="148" type="stmt" count="0"/>
+      <line num="135" type="stmt" count="1"/>
+      <line num="136" type="stmt" count="1"/>
+      <line num="137" type="stmt" count="1"/>
+      <line num="138" type="stmt" count="1"/>
+      <line num="139" type="stmt" count="1"/>
+      <line num="140" type="stmt" count="1"/>
+      <line num="142" type="stmt" count="1"/>
+      <line num="143" type="stmt" count="1"/>
+      <line num="145" type="stmt" count="1"/>
+      <line num="146" type="stmt" count="1"/>
+      <line num="147" type="stmt" count="1"/>
+      <line num="148" type="stmt" count="1"/>
       <line num="149" type="stmt" count="1"/>
       <line num="150" type="stmt" count="1"/>
       <line num="151" type="stmt" count="1"/>
@@ -483,7 +483,7 @@
       <line num="171" type="stmt" count="1"/>
       <line num="174" type="method" name="stop" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="176" type="stmt" count="1"/>
-      <metrics loc="178" ncloc="178" classes="1" methods="10" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="101" coveredstatements="67" elements="111" coveredelements="75"/>
+      <metrics loc="178" ncloc="178" classes="1" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="101" coveredstatements="79" elements="111" coveredelements="88"/>
     </file>
     <file name="C:\Users\Martin\dbwebb-kurser\mvc\me\ci\src\Kernel.php">
       <class name="App\Kernel" namespace="global">

@@ -1,0 +1,23 @@
+ ------ ---------------------------------------------------------------------- 
+ [32m Line [39m [32m src\Controller\BaseController.php                                    [39m 
+ ------ ---------------------------------------------------------------------- 
+[39;49m  45     Call to an undefined method[39;49m[39;49m                                           [39;49m
+[39;49m         [39;49mDoctrine\Persistence\ObjectRepository<App\Entity\Books>::findById().  
+[39;49m  48     Call to an undefined method[39;49m[39;49m                                           [39;49m
+[39;49m         [39;49mDoctrine\Persistence\ObjectRepository<App\Entity\Books>::findById().  
+[39;49m  51     Call to an undefined method[39;49m[39;49m                                           [39;49m
+[39;49m         [39;49mDoctrine\Persistence\ObjectRepository<App\Entity\Books>::findById().  
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+ [32m Line [39m [32m src\Controller\ProductController.php                                  [39m 
+ ------ ----------------------------------------------------------------------- 
+[39;49m  64     Call to an undefined method[39;49m[39;49m                                            [39;49m
+[39;49m         [39;49m[39;49mDoctrine\Persistence\ObjectRepository[39;49m[39;49m<App\Entity\Product>[39;49m[39;49m::findById()[39;49m[39;49m  [39;49m
+[39;49m         [39;49m.                                                                      
+ ------ ----------------------------------------------------------------------- 
+
+[37;41m                                                                               [39;49m
+[37;41m [ERROR] Found 4 errors                                                        [39;49m
+[37;41m                                                                               [39;49m
+
