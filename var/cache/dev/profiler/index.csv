@@ -44,3 +44,5 @@ ffefaa,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/app/public/roll,162139190
 1e525a,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/public/21_1,1621963506,,200
 8dfb15,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/public/roll,1621963508,,200
 e6f05c,::1,GET,http://localhost:8080/dbwebb/mvc/me/ci/public/highscore,1621963510,,200
+69a6bb,::1,GET,http://localhost:8080/dbwebb/mvc/me/ci/public/,1622151290,,200
+3f4979,::1,POST,http://localhost:8080/dbwebb/mvc/me/ci/public/21_1,1622151294,,200

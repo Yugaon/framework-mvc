@@ -154,6 +154,6 @@ class __TwigTemplate_ff272cb9b42d8608ac40f100215a9e39c4b4256c81b43b5e7cd70c4ee39
     </ul>
 </div>
 {% endblock %}
-", "product/index.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\product\\index.html.twig");
+", "product/index.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\product\\index.html.twig");
     }
 }

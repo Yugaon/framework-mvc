@@ -92,6 +92,6 @@ class __TwigTemplate_44ada3759e608982daadfc1068d41b2076212dcf287cbcfd813c0d56ca6
             <input class=\"button\" type=\"submit\" value=\"Two dice\">
           </form>
 {% include 'footer.html.twig' %}
-", "dice.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\dice.html.twig");
+", "dice.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\dice.html.twig");
     }
 }

@@ -198,6 +198,6 @@ class __TwigTemplate_89b30df0e38542c71cd7e7b1f05215d4a6d93c3110fc5aa13d7972838b9
 <?php
 
 {% include 'footer.html.twig' %}
-", "21_2.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\21_2.html.twig");
+", "21_2.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\21_2.html.twig");
     }
 }

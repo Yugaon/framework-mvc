@@ -78,6 +78,6 @@ class __TwigTemplate_09d8e337e7f9a8482468ffb0655741cdaa6fb639e98d16bd1dbc892a096
         <h1>Privjet</h1>
 {% include 'footer.html.twig' %}
 controller: App\\Controller\\DefaultController::index
-", "try.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\try.html.twig");
+", "try.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\try.html.twig");
     }
 }

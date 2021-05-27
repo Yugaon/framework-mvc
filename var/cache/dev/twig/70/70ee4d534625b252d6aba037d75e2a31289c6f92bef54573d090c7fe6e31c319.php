@@ -217,6 +217,6 @@ class __TwigTemplate_33b9860419be2c326a2bfa75e7a059eeb26a7c8a946cbd0b889d08b5a41
         {% endfor %}
         </tr>
         </table>
-", "books.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\books.html.twig");
+", "books.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\books.html.twig");
     }
 }

@@ -73,6 +73,6 @@ class __TwigTemplate_97d7c7169888712667d916ed8994bc9177444059e2f28d93146cf09fdd0
 </footer>
 </body>
 </html>
-", "footer.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\footer.html.twig");
+", "footer.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\footer.html.twig");
     }
 }

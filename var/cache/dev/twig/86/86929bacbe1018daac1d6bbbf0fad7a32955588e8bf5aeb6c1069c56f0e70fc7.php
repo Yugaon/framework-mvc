@@ -136,6 +136,6 @@ class __TwigTemplate_c50e1342e97871a98cf3ab013cdd7ba3b5e1f3e470d2ed1a6f3726a2d12
 
 </table>
 {% include 'footer.html.twig' %}
-", "highscore.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\highscore.html.twig");
+", "highscore.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\highscore.html.twig");
     }
 }

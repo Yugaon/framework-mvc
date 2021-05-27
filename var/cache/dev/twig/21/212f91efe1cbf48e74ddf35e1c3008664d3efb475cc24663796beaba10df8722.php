@@ -423,6 +423,6 @@ th, td {
     height: auto;
     grid-column: span 3;
 }
-", "style.css", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\style.css");
+", "style.css", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\style.css");
     }
 }

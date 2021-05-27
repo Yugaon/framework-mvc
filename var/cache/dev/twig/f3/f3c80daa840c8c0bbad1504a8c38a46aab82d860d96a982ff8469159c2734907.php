@@ -111,6 +111,6 @@ class __TwigTemplate_ffa59affe027eeb584e215b196fc188dd8ad34b957ce96238319e651b88
               <a href=\"{{ path('highscore') }}\">Highscore</a> |
           </nav>
       </header>
-", "header.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\app\\templates\\header.html.twig");
+", "header.html.twig", "C:\\Users\\Martin\\dbwebb-kurser\\mvc\\me\\ci\\templates\\header.html.twig");
     }
 }
